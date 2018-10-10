@@ -31,4 +31,13 @@ public class Produto {
     public void setPaginas(int paginas) {
         this.paginas = paginas;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", paginas=" + paginas +
+                '}';
+    }
 }

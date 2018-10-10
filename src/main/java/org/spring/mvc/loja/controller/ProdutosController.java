@@ -1,11 +1,15 @@
 package org.spring.mvc.loja.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.spring.mvc.loja.model.Produto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ProdutosController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProdutosController.class);
 
     private static String PRODUTOS = "/produtos/";
 
@@ -16,9 +20,7 @@ public class ProdutosController {
 
     @RequestMapping("/produtos")
     public String gravar(Produto produto){
-        System.out.println(produto.getTitulo());
-        System.out.println(produto.getDescricao());
-        System.out.println(produto.getPaginas());
+        logger.info(produto.toString());
         return irProdutos("ok");
     }
 
