@@ -11,7 +11,7 @@ public class ProdutosController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProdutosController.class);
 
-    private static String PRODUTOS = "/produtos/";
+    private static String produtos = "/produtos/";
 
     @RequestMapping("/produtos/form")
     public String form(){
@@ -20,12 +20,12 @@ public class ProdutosController {
 
     @RequestMapping("/produtos")
     public String gravar(Produto produto){
-        logger.info(produto.toString());
+        logger.info("Produto savo com sucesso: {}", produto);
         return irProdutos("ok");
     }
 
     private String irProdutos(String pagina){
-        return PRODUTOS.concat(pagina);
+        return produtos.concat(pagina);
     }
 
 }
