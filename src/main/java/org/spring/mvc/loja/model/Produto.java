@@ -16,6 +16,9 @@ public class Produto {
 
     private String descricao;
 
+
+
+
     private int paginas;
 
     public String getTitulo() {

@@ -22,14 +22,4 @@ public class Normalize {
                 .replaceAll("\\s+", " ");
     }
 
-    public static String unAccent(String s) {
-        //
-        // JDK1.5
-        //   use sun.text.Normalizer.normalize(s, Normalizer.DECOMP, 0);
-        //
-        String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        return pattern.matcher(temp).replaceAll("");
-    }
-
 }
