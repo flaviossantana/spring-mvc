@@ -1,7 +1,6 @@
 package org.spring.mvc.loja;
 
 import java.text.Normalizer;
-import java.util.regex.Pattern;
 
 public class Normalize {
 
